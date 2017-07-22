@@ -1,0 +1,119 @@
+def address(hash={})
+
+  
+
+  if "#{hash["house_number"]}".empty? && "#{hash["house_name"]}".empty? ||
+
+      "#{hash["street_line_1"]}".empty? || "#{hash["town_or_city"]}".empty? || "#{hash["postcode"]}".empty?
+
+      
+
+      print "The following fields are mandatory: 
+
+      At least one of house name and house number
+
+      Street line 1
+
+      Town or city
+
+      Postcode"
+
+      
+
+    else
+
+      puts "The following address was inputted:"
+
+      if "#{hash["subpremise"]}" != ""
+
+        print "#{hash["subpremise"]}, "
+
+      end
+
+      
+
+      if "#{hash["house_name"]}" != ""
+
+        print "#{hash["house_name"]},\n"
+
+      else 
+
+        print "\n"
+
+      end
+
+      
+
+      if "#{hash["house_number"]}" != ""
+
+        print "#{hash["house_number"]}, "
+
+      end
+
+      
+
+      if "#{hash["street_line_1"]}" != ""
+
+        print "#{hash["street_line_1"]},\n"
+
+      end
+
+      
+
+      if "#{hash["street_line_2"]}" != ""
+
+        print "#{hash["street_line_2"]},\n"
+
+      end
+
+      
+
+      if "#{hash["town_or_city"]}" != ""
+
+        print  "#{hash["town_or_city"]},\n"
+
+      end
+
+      
+
+      if "#{hash["region"]}" != ""
+
+        print  "#{hash["region"]},\n"
+
+      end
+
+      
+
+      if "#{hash["postcode"]}" != ""
+
+        puts  "#{hash["postcode"]}\n"
+
+      end
+
+    end
+
+    
+
+end
+
+
+
+address hash={
+
+  "subpremise" => "Apt 6",
+
+  "house_number" => "22",
+
+  "house_name" => nil,
+
+  "street_line_1" => "Bailey Rd",
+
+  "street_line_2" => nil,
+
+  "town_or_city" => "Sale",
+
+  "region" => "Greater Manchester",
+
+  "postcode" => "M33 1AX"
+
+}
